@@ -19,8 +19,8 @@ int main()
         {
             for( int i=0; i<5; i++){
 
-              //string* books = new string[n];
-              //books = createVector(n) ;
+              string* books = new string[n];
+              books = createVector(n) ;
 
               Dataset* booksRegistration = new Dataset[n];
               booksRegistration = createObject(n);

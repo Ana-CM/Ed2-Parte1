@@ -25,7 +25,7 @@ void Dataset::setCategories(string categories){
     this->categories = categories;
 }
 
-void Dataset::setBestsellersRank(int bestsellersRank){
+void Dataset::setBestsellersRank(string bestsellersRank){
      this->bestsellersRank = bestsellersRank ;
 }
 

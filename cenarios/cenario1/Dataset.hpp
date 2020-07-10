@@ -6,8 +6,8 @@ class Dataset
 {
 	private:
 
-		int  bestsellersRank, id, publicationPlace, ratingCount;
-		string authors, categories, description, edition, editionStatement, forAges, isbn10, isbn13, publisher, 
+		int id, publicationPlace, ratingCount;
+		string authors, bestsellersRank, categories, description, edition, editionStatement, forAges, isbn10, isbn13, publisher, 
 		title, format, illustrationsNote, imprint, indexDate, lang, publicationDate, url;
 		float dimensionZ, dimensionX, dimensionY, weight, ratingAvg;
 		
@@ -19,7 +19,7 @@ class Dataset
 		void setAuthors(string authors);
 		string getAuthors();
 		void setCategories(string categories);
-		void setBestsellersRank(int bestsellersRank);
+		void setBestsellersRank(string bestsellersRank);
 		void setId(int id);
 		void setPublicationPlace(int publicationPlace);
 		void setRatingCount(int ratingCount);
@@ -45,3 +45,5 @@ class Dataset
 		void setRatingAvg(float ratingAvg);
 
 };
+
+

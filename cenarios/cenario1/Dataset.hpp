@@ -1,12 +1,13 @@
 //#include <string>
- 
+
+using namespace std;
 #pragma once
 
 class Dataset  
 {
 	private:
-
-		int id, publicationPlace, ratingCount;
+		long long int id;
+		int publicationPlace, ratingCount;
 		string authors, bestsellersRank, categories, description, edition, editionStatement, forAges, isbn10, isbn13, publisher, 
 		title, format, illustrationsNote, imprint, indexDate, lang, publicationDate, url;
 		float dimensionZ, dimensionX, dimensionY, weight, ratingAvg;
@@ -20,7 +21,10 @@ class Dataset
 		string getAuthors();
 		void setCategories(string categories);
 		void setBestsellersRank(string bestsellersRank);
-		void setId(int id);
+
+		void setId(string id);
+		long long int getId();
+		
 		void setPublicationPlace(int publicationPlace);
 		void setRatingCount(int ratingCount);
 		void setDescription(string description);
@@ -38,6 +42,7 @@ class Dataset
 		void setLang(string lang);
 		void setPublicationDate(string publicationDate);
 		void setUrl(string url);
+		string getUrl();
 		void setDimensionZ(float dimensionZ );
 		void setDimensionY(float dimensionY);
 		void setDimensionX(float dimensionX);

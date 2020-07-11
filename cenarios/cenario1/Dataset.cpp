@@ -1,6 +1,6 @@
 #include "Dataset.hpp"  
-/*#include <string>
-using namespace std;*/
+#include <string>
+using namespace std;
 
 Dataset::Dataset()
 {
@@ -29,8 +29,12 @@ void Dataset::setBestsellersRank(string bestsellersRank){
      this->bestsellersRank = bestsellersRank ;
 }
 
-void Dataset::setId(int id){
-     this->id = id;
+void Dataset::setId(string id){
+     this->id = stoll(id);
+}
+
+long long int Dataset::getId(){
+    return this->id;
 }
 
 void Dataset::setPublicationPlace(int publicationPlace){
@@ -100,6 +104,10 @@ void Dataset::setPublicationDate(string publicationDate){
 void Dataset::setUrl(string url){
      url = "https://bookdepository.com" + url;
      this->url = url;
+}
+
+string Dataset::getUrl(){
+     return this->url;
 }
 
 void Dataset::setDimensionZ(float dimensionZ ){

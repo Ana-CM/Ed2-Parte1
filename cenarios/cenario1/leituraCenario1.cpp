@@ -2,6 +2,7 @@
 #include "Dataset.hpp"
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,7 +22,9 @@ string* createVector(int n)
     srand(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count());
 
     if(data.is_open())
-    {
+    {   
+        getline(data,line); // evita q o cabeçario da tabela entre no vetor
+
         while(getline(data,line))
         {
             total_lines++; 
@@ -74,7 +77,7 @@ Dataset* createObject(int n)
                         book[24] = book[24].empty()? empty : book[24];
                     }
                 }
-
+                
                 books[i].setAuthors(book[0].erase(0, 1));
                 books[i].setBestsellersRank(book[1]);
                 books[i].setCategories(book[2]);
@@ -86,7 +89,7 @@ Dataset* createObject(int n)
                 books[i].setEditionStatement(book[8]);
                 books[i].setForAges(book[9]);
                 books[i].setFormat(book[10]);
-                books[i].setId(stoll(book[11]));
+                books[i].setId(book[11]);
                 books[i].setIllustrationsNote(book[12]);
                 books[i].setImprint(book[13]);
                 books[i].setIndexDate(book[14]);

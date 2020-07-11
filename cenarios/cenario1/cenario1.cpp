@@ -29,22 +29,27 @@ void quickSortPartitionVector(string *v, int light, int right, int *i, int *j)
     *i = light; *j = right;
     pivo = v[(*i + *j)/2]; /* obtem o pivo x */
 
-   do{
-        while (!(positionVectorID(pivo) <= positionVectorID(v[*i]))) (*i)++;
-        while ((positionVectorID(pivo) < positionVectorID(v[*j]))) (*j)--;
-        if(*i <= *j) {
+  *i = light; *j = right;
+    pivo = v[(*i + *j)/2]; /* obtem o pivo x */
+
+    do 
+    {
+        while (!(  positionVectorID(pivo) <= positionVectorID(v[*i]) )) (*i)++;
+        while (  positionVectorID(pivo) < positionVectorID(v[*j]) ) (*j)--;
+        if (*i <= *j) 
+        {
             aux = v[*i];
             v[*i] = v[*j];
             v[*j] = aux;
             (*i)++; (*j)--;
-        }
-      } while (*i <= *j);
+         }
+    } while (*i <= *j);
 }
 
 void quickSortOrderVector(string *v, int light, int right){
     int i, j;
     quickSortPartitionVector(v, light, right, &i, &j);
-    if (light < j) quickSortOrderVector(v, right, j);
+    if (light < j) quickSortOrderVector(v, light, j);
     if (i < right) quickSortOrderVector(v, i, right);
 }
 

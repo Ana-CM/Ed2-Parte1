@@ -18,25 +18,17 @@ int main()
 
         for (int j=0; j<nInput; j++ )
         {
-           // for( int i=0; i<5; i++){
+          for( int i=0; i<5; i++){
 
             string* books = new string[n];
             books = createVector(n) ;
+            //quickSortVector(books, n);
 
             Dataset* booksRegistration = new Dataset[n];
             booksRegistration = createObject(n);
-              
-           QuickSortObj(booksRegistration, n);
-
-             //quickSortVector(books, n);
-
-            cout << " Depois:" << endl;
-            cout << booksRegistration[0].getId() << endl;
-            cout << booksRegistration[1].getId() << endl;
-            cout << booksRegistration[2].getId() << endl;
-            cout << booksRegistration[3].getId() << endl;
-              
-          //  }
+            //QuickSortObj(booksRegistration, n);   
+            
+          }
         }
 
         input.close();

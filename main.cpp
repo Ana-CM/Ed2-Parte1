@@ -7,7 +7,21 @@ using namespace std;
 
 int main()
 {
-    cenario1();
+    ifstream input("entrada.txt");
+    int n, *vectorSize; 
+
+    if (input.is_open())
+    {
+        input >> n;
+        vectorSize = new int[n];
+
+        for (int i = 0; i < n; i++){input >> vectorSize[i];} 
+
+        cenario1(n,vectorSize);
+
+        input.close();
+
+    } else cout << "Error opening file 'entrada.txt' ";
      
     return 0;
 }

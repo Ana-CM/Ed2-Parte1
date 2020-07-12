@@ -8,31 +8,21 @@
 #include <windows.h>
 using namespace std;
 
-void cenario1()
+void cenario1(int n, int* vectorSize)
 {
-    ifstream input("entrada.txt");
-    int nInput, n; 
+  for (int j=0; j < n ; j++ )
+  {
+    for( int i=0; i<5; i++)
+    {
+        string* books = new string[vectorSize[j]];
+        books = createVector(vectorSize[j]) ;
+        quickSortVector(books, vectorSize[j]);
 
-    if (input.is_open()){
-        input >> nInput;
-        input >> n;
-
-        for (int j=0; j<nInput; j++ )
-        {
-          for( int i=0; i<5; i++)
-          {
-              string* books = new string[n];
-              books = createVector(n) ;
-              quickSortVector(books, n);
-
-              Dataset* booksRegistration = new Dataset[n];
-              booksRegistration = createObject(n);
-              QuickSortObj(booksRegistration, n);   
-              
-              //Sleep (1);
-            }
-        }
-
-        input.close();
-      } else cout << "Error opening file 'entrada.txt' ";
+        Dataset* booksRegistration = new Dataset[vectorSize[j]];
+        booksRegistration = createObject(vectorSize[j]);
+        QuickSortObj(booksRegistration, vectorSize[j]);   
+        
+        //Sleep (1);
+      }
+  }
 }

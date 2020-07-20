@@ -10,7 +10,7 @@ using namespace std;
 void cenario1(int n, int* vectorSize)
 {
   double time;
-/*
+
   cout<< "tempos de execucao do vetor" << endl;
   for (int j=0; j < n ; j++ )
   {
@@ -23,9 +23,10 @@ void cenario1(int n, int* vectorSize)
         quickSortVector(books, vectorSize[j], &time); 
 
         cout << time << endl;
+        delete[] books;
     }
   }
-*/
+
   cout<< "tempos de execucao do objeto " << endl;
   for (int j=0; j < n ; j++ )
   {
@@ -38,6 +39,7 @@ void cenario1(int n, int* vectorSize)
         QuickSortObj(booksRegistration, vectorSize[j], &time);  
 
         cout << time << endl; 
+        delete[] booksRegistration;
     }
   }
 }

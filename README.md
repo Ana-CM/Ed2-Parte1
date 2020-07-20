@@ -7,7 +7,7 @@
 
 - Inicialize o git na pasta: git init
 
-- Crie um clone do repositório: git clone https://github.com/lucas-pace/ludoStore.git
+- Crie um clone do repositório
 
 - Entre na pasta criada pelo comando clone: cd /caminho/para/a/pasta/nova
 

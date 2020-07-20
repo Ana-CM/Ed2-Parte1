@@ -30,19 +30,31 @@ void Dataset::setBestsellersRank(string bestsellersRank){
 }
 
 void Dataset::setId(string id){
-     this->id = stoll(id);
+     try{
+          this->id = stoll(id);
+     }catch(invalid_argument){
+          this->id = 0;
+     }
 }
 
 long long int Dataset::getId(){
     return this->id;
 }
 
-void Dataset::setPublicationPlace(int publicationPlace){
-     this->publicationPlace = publicationPlace;
+void Dataset::setPublicationPlace(string publicationPlace){
+      try{
+          this->publicationPlace = stoll(publicationPlace);
+     }catch(invalid_argument){
+          this->publicationPlace = 0;
+     }
 }
 
-void Dataset::setRatingCount(int ratingCount){
-     this->ratingCount = ratingCount;
+void Dataset::setRatingCount(string ratingCount){
+     try{
+          this->ratingCount = stoll(ratingCount);
+     }catch(invalid_argument){
+          this->ratingCount = 0;
+     }
 }
 
 void Dataset::setDescription(string description){
@@ -106,26 +118,42 @@ void Dataset::setUrl(string url){
      this->url = url;
 }
 
-string Dataset::getUrl(){
-     return this->url;
+void Dataset::setDimensionZ(string dimensionZ ){
+     try{
+          this->dimensionZ = stof(dimensionZ);
+     }catch(invalid_argument){
+          this->dimensionZ = 0;
+     }
 }
 
-void Dataset::setDimensionZ(float dimensionZ ){
-     this->dimensionZ = dimensionZ;
+void Dataset::setDimensionY(string dimensionY){
+     try{
+          this->dimensionY = stof(dimensionY);
+     }catch(invalid_argument){
+          this->dimensionY = 0;
+     }
 }
 
-void Dataset::setDimensionY(float dimensionY){
-     this->dimensionY = dimensionY;
+void Dataset::setDimensionX(string dimensionX){
+     try{
+          this->dimensionX = stof(dimensionX);
+     }catch(invalid_argument){
+          this->dimensionX = 0;
+     }
 }
 
-void Dataset::setDimensionX(float dimensionX){
-     this->dimensionX = dimensionX;
+void Dataset::setWeight(string weight){
+     try{
+          this->ratingAvg = stof(weight);
+     }catch(invalid_argument){
+          this->weight = 0;
+     }
 }
 
-void Dataset::setWeight(float weight){
-     this->weight = weight;
-}
-
-void Dataset::setRatingAvg(float ratingAvg){
-     this->ratingAvg = ratingAvg;
+void Dataset::setRatingAvg(string ratingAvg){
+     try{
+          this->ratingAvg = stof(ratingAvg);
+     }catch(invalid_argument){
+          this->ratingAvg = 0;
+     }
 }

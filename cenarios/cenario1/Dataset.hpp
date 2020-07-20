@@ -24,9 +24,8 @@ class Dataset
 
 		void setId(string id);
 		long long int getId();
-		
-		void setPublicationPlace(int publicationPlace);
-		void setRatingCount(int ratingCount);
+		void setPublicationPlace(string publicationPlace);
+		void setRatingCount(string ratingCount);
 		void setDescription(string description);
 		void setEdition(string edition);
 		void setEditionStatement(string editionStatement);
@@ -42,12 +41,11 @@ class Dataset
 		void setLang(string lang);
 		void setPublicationDate(string publicationDate);
 		void setUrl(string url);
-		string getUrl();
-		void setDimensionZ(float dimensionZ );
-		void setDimensionY(float dimensionY);
-		void setDimensionX(float dimensionX);
-		void setWeight(float weight);
-		void setRatingAvg(float ratingAvg);
+		void setDimensionZ(string dimensionZ );
+		void setDimensionY(string dimensionY);
+		void setDimensionX(string dimensionX);
+		void setWeight(string weight);
+		void setRatingAvg(string ratingAvg);
 
 };
 

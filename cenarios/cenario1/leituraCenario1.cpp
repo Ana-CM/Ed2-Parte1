@@ -47,7 +47,7 @@ Dataset* createObject(int n)
 {
     ifstream data("dataset.csv");
     Dataset *books =  new Dataset[n];
-    string line, delimiter = "\",\"", empty = "0";
+    string line, delimiter = "\",\"";
     int i=0;
     srand(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count());
     
@@ -67,24 +67,20 @@ Dataset* createObject(int n)
                     if (j != 24)
                     {
                         book[j] = line.substr(0, line.find(delimiter));
-                        book[j] = book[j].empty()? empty : book[j] ;
                         line.erase(0, line.find(delimiter) + delimiter.length());
                     }
                     else
                     {
-                        line.pop_back();
                         book[24] = line;
-                        book[24] = book[24].empty()? empty : book[24];
                     }
                 }
-                
                 books[i].setAuthors(book[0].erase(0, 1));
                 books[i].setBestsellersRank(book[1]);
                 books[i].setCategories(book[2]);
                 books[i].setDescription(book[3]);
-                books[i].setDimensionX(stof(book[4]));
-                books[i].setDimensionY(stof(book[5]));
-                books[i].setDimensionZ(stof(book[6]));
+                books[i].setDimensionX(book[4]);
+                books[i].setDimensionY(book[5]);
+                books[i].setDimensionZ(book[6]);
                 books[i].setEdition(book[7]);
                 books[i].setEditionStatement(book[8]);
                 books[i].setForAges(book[9]);
@@ -97,12 +93,12 @@ Dataset* createObject(int n)
                 books[i].setIsbn13(book[16]);
                 books[i].setLang(book[17]);
                 books[i].setPublicationDate(book[18]);
-                books[i].setPublicationPlace(stoll(book[19]));
-                books[i].setRatingAvg(stof(book[20]));
-                books[i].setRatingCount(stoll(book[21]));
+                books[i].setPublicationPlace(book[19]);
+                books[i].setRatingAvg(book[20]);
+                books[i].setRatingCount(book[21]);
                 books[i].setTitle(book[22]);
                 books[i].setUrl(book[23]);
-                books[i].setWeight(stof(book[24]));
+                books[i].setWeight(book[24]);
  
                 i++;
             }

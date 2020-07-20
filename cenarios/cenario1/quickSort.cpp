@@ -4,23 +4,29 @@
 #include <fstream>
 #include <string>
 #include <bits/stdc++.h>
+#include <time.h> 
 using namespace std;
 
 long long int positionVectorID(string position)
 {   
-    string delimiter = "\",\"", empty = "0", book[25];
+    string delimiter = "\",\"", book[11];
     long long int ID;
 
-    for( int i = 0; i < 25; i++)
+    for( int i = 0; i < 12; i++)
     {
         book[i] = position.substr(0, position.find(delimiter));
         position.erase(0, position.find(delimiter) + delimiter.length());
     }
 
-    book[11] = book[11].empty()? empty : book[11];
-    ID = stoll(book[11]);
+    try {
+        ID = stoll(book[11]);
+    }catch(invalid_argument){
+        ID = 0;
+    } 
 
-    return ID;
+  //cout<< ID << endl;
+
+   return ID;
 }
 
 void quickSortPartitionVector(string *v, int light, int right, int *i, int *j)
@@ -43,15 +49,21 @@ void quickSortPartitionVector(string *v, int light, int right, int *i, int *j)
     } while (*i <= *j);
 }
 
-void quickSortOrderVector(string *v, int light, int right){
+void quickSortOrderVector(string *v, int light, int right, double *time){
     int i, j;
+    clock_t start, finish;
+    start = clock();
+
     quickSortPartitionVector(v, light, right, &i, &j);
-    if (light < j) quickSortOrderVector(v, light, j);
-    if (i < right) quickSortOrderVector(v, i, right);
+    if (light < j) quickSortOrderVector(v, light, j, time);
+    if (i < right) quickSortOrderVector(v, i, right, time);
+
+    finish = clock();
+    *time = *time + ( (double) (finish - start) ) / CLOCKS_PER_SEC;
 }
 
-void quickSortVector(string *v, int n){
-    quickSortOrderVector(v, 0, n-1);
+void quickSortVector(string *v, int n, double *time){
+    quickSortOrderVector(v, 0, n-1, time);
 }
 
 // ordenação  do objeto
@@ -75,14 +87,20 @@ void QuickSort_partitionObj(Dataset *v, int light, int right,int *i, int *j)
     } while (*i <= *j);
 }
 
-void QuickSort_orderObj(Dataset *v, int light, int right) {
+void QuickSort_orderObj(Dataset *v, int light, int right, double *time) {
  int i, j;
+
+ clock_t start, finish;
+ start = clock();
+
  QuickSort_partitionObj(v, light, right, &i, &j);
- if (light < j) QuickSort_orderObj(v, light, j);
- if (i < right) QuickSort_orderObj(v, i, right);
+ if (light < j) QuickSort_orderObj(v, light, j, time);
+ if (i < right) QuickSort_orderObj(v, i, right, time);
+
+ finish = clock();
+ *time = *time + ( (double) (finish - start) ) / CLOCKS_PER_SEC;
 }
 
-
-void QuickSortObj(Dataset *v, int n) {
- QuickSort_orderObj(v, 0, n-1);
+void QuickSortObj(Dataset *v, int n, double *time) {
+ QuickSort_orderObj(v, 0, n-1, time);
 }

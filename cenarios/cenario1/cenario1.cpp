@@ -10,35 +10,45 @@ using namespace std;
 void cenario1(int n, int* vectorSize)
 {
   double time;
+  int copies, comparisons;
+  ofstream exitArq("saida.txt");
 
-  cout<< "tempos de execucao do vetor" << endl;
+  exitArq<< endl;
+  exitArq<< "Analise dos vetores" << endl;
   for (int j=0; j < n ; j++ )
   {
-    cout<< "vetor de tamanho " << vectorSize[j] <<endl;
+    exitArq<< "vetores de tamanho " << vectorSize[j] <<endl;
     for( int i=0; i<5; i++)
     {   
-        time = 0;
+        time = 0, copies = 0, comparisons = 0;
         string* books = new string[vectorSize[j]];
         books = createVector(vectorSize[j]) ;
-        quickSortVector(books, vectorSize[j], &time); 
+        quickSortVector(books, vectorSize[j], &time, &copies, &comparisons); 
 
-        cout << time << endl;
+        exitArq<< "Cópias: " << copies << endl;
+        exitArq<< "Comparações: " << comparisons << endl;
+        exitArq<< "Tempo: " << time << endl;
+        exitArq<< endl;
         delete[] books;
     }
   }
 
-  cout<< "tempos de execucao do objeto " << endl;
+  exitArq<< endl;
+  exitArq<< "Analise dos objetos " << endl;
   for (int j=0; j < n ; j++ )
   {
-    cout<< "objeto de tamanho " << vectorSize[j] <<endl;
+    exitArq<< "objetos de tamanho " << vectorSize[j] <<endl;
     for( int i=0; i<5; i++)
     {   
-        time = 0;
+        time = 0, copies = 0, comparisons = 0;
         Dataset* booksRegistration = new Dataset[vectorSize[j]];
         booksRegistration = createObject(vectorSize[j]);
-        QuickSortObj(booksRegistration, vectorSize[j], &time);  
+        QuickSortObj(booksRegistration, vectorSize[j], &time, &copies, &comparisons);  
 
-        cout << time << endl; 
+        exitArq<< "Cópias: " << copies << endl;
+        exitArq<< "Comparações: " << comparisons << endl;
+        exitArq<< "Tempo: " << time << endl;
+        exitArq<< endl;
         delete[] booksRegistration;
     }
   }

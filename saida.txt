@@ -1,0 +1,214 @@
+
+Analise dos vetores
+vetores de tamanho 1000
+Cópias: 5088
+Comparações: 7895
+Tempo: 0.011
+
+Cópias: 5160
+Comparações: 7767
+Tempo: 0.011
+
+Cópias: 5278
+Comparações: 7027
+Tempo: 0.008
+
+Cópias: 5158
+Comparações: 7937
+Tempo: 0.016
+
+Cópias: 5302
+Comparações: 6156
+Tempo: 0.013
+
+vetores de tamanho 5000
+Cópias: 31738
+Comparações: 46941
+Tempo: 0.041
+
+Cópias: 31728
+Comparações: 46011
+Tempo: 0.041
+
+Cópias: 31592
+Comparações: 45311
+Tempo: 0.041
+
+Cópias: 31660
+Comparações: 46450
+Tempo: 0.043
+
+Cópias: 31660
+Comparações: 47577
+Tempo: 0.053
+
+vetores de tamanho 10000
+Cópias: 68174
+Comparações: 100950
+Tempo: 0.146
+
+Cópias: 68170
+Comparações: 106285
+Tempo: 0.082
+
+Cópias: 67516
+Comparações: 111244
+Tempo: 0.091
+
+Cópias: 68060
+Comparações: 101332
+Tempo: 0.081
+
+Cópias: 68204
+Comparações: 102102
+Tempo: 0.081
+
+vetores de tamanho 50000
+Cópias: 400996
+Comparações: 626039
+Tempo: 0.449
+
+Cópias: 401782
+Comparações: 685673
+Tempo: 0.526
+
+Cópias: 408088
+Comparações: 564769
+Tempo: 0.53
+
+Cópias: 406830
+Comparações: 571325
+Tempo: 0.454
+
+Cópias: 406432
+Comparações: 578156
+Tempo: 0.444
+
+vetores de tamanho 100000
+Cópias: 869616
+Comparações: 1328312
+Tempo: 0.959
+
+Cópias: 877360
+Comparações: 1243004
+Tempo: 0.985
+
+Cópias: 879898
+Comparações: 1256721
+Tempo: 0.987
+
+Cópias: 877730
+Comparações: 1247066
+Tempo: 0.995
+
+Cópias: 874632
+Comparações: 1261312
+Tempo: 0.988
+
+
+Analise dos objetos 
+objetos de tamanho 1000
+Cópias: 2557
+Comparações: 8869
+Tempo: 0.012
+
+Cópias: 2605
+Comparações: 7171
+Tempo: 0.013
+
+Cópias: 2639
+Comparações: 7287
+Tempo: 0.013
+
+Cópias: 2588
+Comparações: 7810
+Tempo: 0.016
+
+Cópias: 2590
+Comparações: 7141
+Tempo: 0.013
+
+objetos de tamanho 5000
+Cópias: 20227
+Comparações: 31147
+Tempo: 0.072
+
+Cópias: 19484
+Comparações: 31680
+Tempo: 0.069
+
+Cópias: 19310
+Comparações: 34458
+Tempo: 0.069
+
+Cópias: 19747
+Comparações: 32220
+Tempo: 0.071
+
+Cópias: 19555
+Comparações: 31631
+Tempo: 0.093
+
+objetos de tamanho 10000
+Cópias: 51939
+Comparações: 34756
+Tempo: 0.138
+
+Cópias: 52023
+Comparações: 38800
+Tempo: 0.152
+
+Cópias: 51601
+Comparações: 46996
+Tempo: 0.136
+
+Cópias: 52105
+Comparações: 37209
+Tempo: 0.148
+
+Cópias: 52290
+Comparações: 34684
+Tempo: 0.139
+
+objetos de tamanho 50000
+Cópias: 358007
+Comparações: 47523
+Tempo: 0.845
+
+Cópias: 357607
+Comparações: 43524
+Tempo: 0.837
+
+Cópias: 357823
+Comparações: 52378
+Tempo: 0.839
+
+Cópias: 358503
+Comparações: 54019
+Tempo: 0.762
+
+Cópias: 358164
+Comparações: 56943
+Tempo: 0.835
+
+objetos de tamanho 100000
+Cópias: 788708
+Comparações: 43232
+Tempo: 1.733
+
+Cópias: 797344
+Comparações: 67555
+Tempo: 1.688
+
+Cópias: 788512
+Comparações: 43242
+Tempo: 1.649
+
+Cópias: 788667
+Comparações: 44541
+Tempo: 1.737
+
+Cópias: 789174
+Comparações: 42441
+Tempo: 1.693
+

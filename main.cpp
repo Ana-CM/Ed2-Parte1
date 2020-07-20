@@ -22,6 +22,6 @@ int main()
         input.close();
 
     } else cout << "Error opening file 'entrada.txt' ";
-     cout << "fim :)"<<endl;
+
     return 0;
 }

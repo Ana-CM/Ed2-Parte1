@@ -37,22 +37,20 @@ void quickSortPartitionVector(string *v, int light, int right, int *i, int *j, l
     *i = light; *j = right;
     pivo = vectorID[(*i + *j)/2]; // obtem o pivo x 
 
-    do 
+    while (!(  pivo <= vectorID[*i] )){ (*i)++; *comparisons = *comparisons + 1;}
+    while ( pivo < vectorID[*j] ){ (*j)--; *comparisons = *comparisons + 1;}
+    if (*i <= *j) 
     {
-        while (!(  pivo <= vectorID[*i] )){ (*i)++; *comparisons = *comparisons + 1;}
-        while ( pivo < vectorID[*j] ){ (*j)--; *comparisons = *comparisons + 1;}
-        if (*i <= *j) 
-        {
-            aux = v[*i];  // copia do vetor de livros na posição i
-            aux2 = vectorID[*i]; // copia do vetor dos IDs dos livros na posição i
-            v[*i] = v[*j];
-            vectorID[*i] = vectorID[*j];
-            v[*j] = aux;
-            vectorID[*j] = aux2;
-            (*i)++; (*j)--;
-            *copies = *copies + 2;
-         }
-    } while (*i <= *j);
+        aux = v[*i];  // copia do vetor de livros na posição i
+        aux2 = vectorID[*i]; // copia do vetor dos IDs dos livros na posição i
+        v[*i] = v[*j];
+        vectorID[*i] = vectorID[*j];
+        v[*j] = aux;
+        vectorID[*j] = aux2;
+        (*i)++; (*j)--;
+        *copies = *copies + 2;
+    }
+  
 }
 
 void quickSortOrderVector(string *v, int light, int right, long long int* vectorID, int *copies, int* comparisons){
@@ -87,19 +85,17 @@ void QuickSort_partitionObj(Dataset *v, int light, int right,int *i, int *j, int
     *i = light; *j = right;
     pivo = v[(*i + *j)/2]; // obtem o pivo x 
 
-    do 
+    while (!(pivo.getId() <= v[*i].getId())){ (*i)++; *comparisons = *comparisons + 1;}
+    while (pivo.getId() < v[*j].getId()){ (*j)--; *comparisons = *comparisons + 1; }
+    if (*i <= *j) 
     {
-        while (!(pivo.getId() <= v[*i].getId())){ (*i)++; *comparisons = *comparisons + 1;}
-        while (pivo.getId() < v[*j].getId()){ (*j)--; *comparisons = *comparisons + 1; }
-        if (*i <= *j) 
-        {
-            aux = v[*i]; // cópia do objeto na posiçao i
-            v[*i] = v[*j];
-            v[*j] = aux;
-            (*i)++; (*j)--;
-            *copies = *copies + 1;
-         }
-    } while (*i <= *j);
+        aux = v[*i]; // cópia do objeto na posiçao i
+        v[*i] = v[*j];
+        v[*j] = aux;
+        (*i)++; (*j)--;
+        *copies = *copies + 1;
+    }
+
 }
 
 void QuickSort_orderObj(Dataset *v, int light, int right, int *copies, int* comparisons){

@@ -20,6 +20,7 @@ int main()
         cenario1(n,vectorSize);
 
         input.close();
+        delete[] vectorSize;
 
     } else cout << "Error opening file 'entrada.txt' ";
 

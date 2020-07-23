@@ -21,7 +21,6 @@ class Dataset
 		string getAuthors();
 		void setCategories(string categories);
 		void setBestsellersRank(string bestsellersRank);
-
 		void setId(string id);
 		long long int getId();
 		void setPublicationPlace(string publicationPlace);
@@ -34,6 +33,7 @@ class Dataset
 		void setIsbn13(string isbn13);
 		void setPublisher(string publisher);
 		void setTitle(string title);
+		string getTitle();
 		void setFormat(string format);
 		void setIllustrationsNote(string illustrationsNote);
 		void setImprint(string imprint);

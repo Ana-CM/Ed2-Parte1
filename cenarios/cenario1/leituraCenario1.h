@@ -5,7 +5,7 @@
 #include "Dataset.hpp"
 using namespace std;
 
-    string* createVector(int n);
-    Dataset* createObject(int n);
+    void createVector(int n, string* books);
+    void createObject(int n, Dataset *books );
 
 #endif // LEITURACENARIO1_H

@@ -12,10 +12,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-string* createVector(int n)
+void createVector(int n, string* books)
 {
     ifstream data("dataset.csv");
-    string *books =  new string[n];
     string line;
     vector<string> lines;
     int total_lines=0, i=0;
@@ -40,13 +39,11 @@ string* createVector(int n)
     }else cout << "Error opening file 'dataset.csv' ";
 
     data.close();
-    return books;
 }
 
-Dataset* createObject(int n)
+void createObject(int n, Dataset *books )
 {
     ifstream data("dataset.csv");
-    Dataset *books =  new Dataset[n];
     string line, delimiter = "\",\"";
     int i=0;
     srand(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count());
@@ -109,6 +106,4 @@ Dataset* createObject(int n)
     data.close();
     
     shuffle(books, books + n, default_random_engine(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count()));
-    
-    return books;
 }

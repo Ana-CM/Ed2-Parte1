@@ -22,7 +22,7 @@ void cenario1(int n, int* vectorSize)
     {   
         time = 0, copies = 0, comparisons = 0;
         string* books = new string[vectorSize[j]];
-        books = createVector(vectorSize[j]) ;
+        createVector(vectorSize[j], books) ;
         quickSortVector(books, vectorSize[j], &time, &copies, &comparisons); 
 
         exitArq<< "Cópias: " << copies << endl;
@@ -42,7 +42,7 @@ void cenario1(int n, int* vectorSize)
     {   
         time = 0, copies = 0, comparisons = 0;
         Dataset* booksRegistration = new Dataset[vectorSize[j]];
-        booksRegistration = createObject(vectorSize[j]);
+        createObject(vectorSize[j], booksRegistration );
         QuickSortObj(booksRegistration, vectorSize[j], &time, &copies, &comparisons);  
 
         exitArq<< "Cópias: " << copies << endl;

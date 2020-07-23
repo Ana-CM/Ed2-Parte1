@@ -89,6 +89,10 @@ void Dataset::setTitle(string title){
      this->title = title;
 }
 
+string  Dataset::getTitle(){
+     return this->title;
+}
+
 void Dataset::setFormat(string format){
      this->format = format;
 }

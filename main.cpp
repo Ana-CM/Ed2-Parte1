@@ -18,7 +18,7 @@ int main()
         vectorSize = new int[n];
         for (int i = 0; i < n; i++){input >> vectorSize[i];} 
 
-//      cenario1(n,vectorSize);
+        cenario1(n,vectorSize);
         input.close();
         delete[] vectorSize;
 
@@ -26,7 +26,7 @@ int main()
 
 
    //cenario 2 chamada
-    cenario2(vectorSizeCenario2, n2);
+ //   cenario2(vectorSizeCenario2, n2);
 
     cout<< "fim" <<endl;
 

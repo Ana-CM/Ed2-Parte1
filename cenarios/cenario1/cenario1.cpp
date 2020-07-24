@@ -9,7 +9,8 @@ using namespace std;
 
 void cenario1(int n, int* vectorSize)
 {
-  double time;
+  double time, totalTime;
+  long long int totalCopies, totalComparisons;
   int copies, comparisons;
   ofstream exitArq("saida.txt");
 
@@ -18,6 +19,7 @@ void cenario1(int n, int* vectorSize)
   for (int j=0; j < n ; j++ )
   {
     exitArq<< "vetores de tamanho " << vectorSize[j] <<endl;
+    totalCopies = 0; totalComparisons = 0; totalTime = 0;
     for( int i=0; i<5; i++)
     {   
         time = 0, copies = 0, comparisons = 0;
@@ -25,12 +27,17 @@ void cenario1(int n, int* vectorSize)
         createVector(vectorSize[j], books) ;
         quickSortVector(books, vectorSize[j], &time, &copies, &comparisons); 
 
-        exitArq<< "Cópias: " << copies << endl;
-        exitArq<< "Comparações: " << comparisons << endl;
-        exitArq<< "Tempo: " << time << endl;
-        exitArq<< endl;
+        totalCopies = totalCopies + copies; 
+        totalComparisons =  totalComparisons + comparisons; 
+        totalTime = totalTime + time;
+
         delete[] books;
     }
+
+      exitArq<< "Cópias (valor médio): " << totalCopies/5 << endl;
+      exitArq<< "Comparações (valor médio): " << totalComparisons/5 << endl;
+      exitArq<< "Tempo (valor médio): " << totalTime/5 << endl;
+      exitArq<< endl;
   }
 
   exitArq<< endl;
@@ -38,6 +45,7 @@ void cenario1(int n, int* vectorSize)
   for (int j=0; j < n ; j++ )
   {
     exitArq<< "objetos de tamanho " << vectorSize[j] <<endl;
+    totalCopies = 0; totalComparisons = 0; totalTime = 0;
     for( int i=0; i<5; i++)
     {   
         time = 0, copies = 0, comparisons = 0;
@@ -45,11 +53,16 @@ void cenario1(int n, int* vectorSize)
         createObject(vectorSize[j], booksRegistration );
         QuickSortObj(booksRegistration, vectorSize[j], &time, &copies, &comparisons);  
 
-        exitArq<< "Cópias: " << copies << endl;
-        exitArq<< "Comparações: " << comparisons << endl;
-        exitArq<< "Tempo: " << time << endl;
-        exitArq<< endl;
+        totalCopies = totalCopies + copies; 
+        totalComparisons =  totalComparisons + comparisons; 
+        totalTime = totalTime + time;
+
         delete[] booksRegistration;
     }
+
+      exitArq<< "Cópias (valor médio): " << totalCopies/5 << endl;
+      exitArq<< "Comparações (valor médio): " << totalComparisons/5 << endl;
+      exitArq<< "Tempo (valor médio): " << totalTime/5 << endl;
+      exitArq<< endl;
   }
 }

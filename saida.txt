@@ -1,24 +1,54 @@
 
 Analise dos vetores
 vetores de tamanho 1000
-Cópias: 1312962
-Comparações: 4445311
-Tempo: 0.606
-
-Cópias: 1286114
-Comparações: 4308284
-Tempo: 0.5
-
-Cópias: 1261902
-Comparações: 4327741
-Tempo: 0.397
-
-Cópias: 1258780
-Comparações: 4312077
-Tempo: 0.407
-
-Cópias: 1194404
-Comparações: 4164901
-Tempo: 0.412
+Cópias (valor médio): 5210
+Comparações (valor médio): 7609
+Tempo (valor médio): 0.0114
 
 vetores de tamanho 5000
+Cópias (valor médio): 31495
+Comparações (valor médio): 49155
+Tempo (valor médio): 0.0474
+
+vetores de tamanho 10000
+Cópias (valor médio): 67893
+Comparações (valor médio): 106824
+Tempo (valor médio): 0.0944
+
+vetores de tamanho 50000
+Cópias (valor médio): 405299
+Comparações (valor médio): 601233
+Tempo (valor médio): 0.486
+
+vetores de tamanho 100000
+Cópias (valor médio): 876051
+Comparações (valor médio): 1257882
+Tempo (valor médio): 0.9902
+
+
+Analise dos objetos 
+objetos de tamanho 1000
+Cópias (valor médio): 2590
+Comparações (valor médio): 7643
+Tempo (valor médio): 0.013
+
+objetos de tamanho 5000
+Cópias (valor médio): 19604
+Comparações (valor médio): 33233
+Tempo (valor médio): 0.078
+
+objetos de tamanho 10000
+Cópias (valor médio): 52118
+Comparações (valor médio): 37362
+Tempo (valor médio): 0.1804
+
+objetos de tamanho 50000
+Cópias (valor médio): 358322
+Comparações (valor médio): 50436
+Tempo (valor médio): 0.938
+
+objetos de tamanho 100000
+Cópias (valor médio): 790453
+Comparações (valor médio): 47733
+Tempo (valor médio): 1.8502
+

@@ -2,157 +2,37 @@
 Analise dos vetores
 vetores de tamanho 1000
 QuickSort Inserção
-Cópias: 5216
-Comparações: 5373
-Tempo: 0.004
-
-QuickSort Inserção
-Cópias: 5075
-Comparações: 5136
-Tempo: 0.003
-
-QuickSort Inserção
-Cópias: 5824
-Comparações: 5871
-Tempo: 0.003
-
-QuickSort Inserção
-Cópias: 6042
-Comparações: 6063
-Tempo: 0.005
-
-QuickSort Inserção
-Cópias: 5395
-Comparações: 5428
-Tempo: 0.004
+Cópias (valor médio): 5505
+Comparações (valor médio): 5603
+Tempo (valor médio): 0.0024
 
 vetores de tamanho 5000
 QuickSort Inserção
-Cópias: 35009
-Comparações: 35337
-Tempo: 0.053
-
-QuickSort Inserção
-Cópias: 34522
-Comparações: 34686
-Tempo: 0.029
-
-QuickSort Inserção
-Cópias: 33934
-Comparações: 34165
-Tempo: 0.028
-
-QuickSort Inserção
-Cópias: 37048
-Comparações: 37370
-Tempo: 0.031
-
-QuickSort Inserção
-Cópias: 40175
-Comparações: 40292
-Tempo: 0.044
+Cópias (valor médio): 38249
+Comparações (valor médio): 38533
+Tempo (valor médio): 0.0212
 
 vetores de tamanho 10000
 QuickSort Inserção
-Cópias: 75268
-Comparações: 76054
-Tempo: 0.063
-
-QuickSort Inserção
-Cópias: 80358
-Comparações: 81001
-Tempo: 0.066
-
-QuickSort Inserção
-Cópias: 77823
-Comparações: 78280
-Tempo: 0.051
-
-QuickSort Inserção
-Cópias: 72860
-Comparações: 73670
-Tempo: 0.051
-
-QuickSort Inserção
-Cópias: 81305
-Comparações: 81747
-Tempo: 0.051
+Cópias (valor médio): 79487
+Comparações (valor médio): 79872
+Tempo (valor médio): 0.0452
 
 vetores de tamanho 50000
 QuickSort Inserção
-Cópias: 459380
-Comparações: 461581
-Tempo: 0.256
-
-QuickSort Inserção
-Cópias: 465479
-Comparações: 467087
-Tempo: 0.246
-
-QuickSort Inserção
-Cópias: 485567
-Comparações: 488171
-Tempo: 0.252
-
-QuickSort Inserção
-Cópias: 491882
-Comparações: 493602
-Tempo: 0.255
-
-QuickSort Inserção
-Cópias: 477908
-Comparações: 479475
-Tempo: 0.255
+Cópias (valor médio): 479808
+Comparações (valor médio): 481665
+Tempo (valor médio): 0.2876
 
 vetores de tamanho 100000
 QuickSort Inserção
-Cópias: 1011167
-Comparações: 1001697
-Tempo: 0.704
-
-QuickSort Inserção
-Cópias: 1143805
-Comparações: 1133655
-Tempo: 0.702
-
-QuickSort Inserção
-Cópias: 948681
-Comparações: 938236
-Tempo: 0.616
-
-QuickSort Inserção
-Cópias: 1010203
-Comparações: 1000160
-Tempo: 0.603
-
-QuickSort Inserção
-Cópias: 975341
-Comparações: 965375
-Tempo: 0.537
+Cópias (valor médio): 1000501
+Comparações (valor médio): 990835
+Tempo (valor médio): 0.5844
 
 vetores de tamanho 500000
 QuickSort Inserção
-Cópias: 5869664
-Comparações: 5326324
-Tempo: 3.668
-
-QuickSort Inserção
-Cópias: 5806253
-Comparações: 5263134
-Tempo: 3.494
-
-QuickSort Inserção
-Cópias: 5479783
-Comparações: 4936501
-Tempo: 3.364
-
-QuickSort Inserção
-Cópias: 5436732
-Comparações: 4893287
-Tempo: 3.399
-
-QuickSort Inserção
-Cópias: 5579827
-Comparações: 5036747
-Tempo: 3.435
+Cópias (valor médio): 5891884
+Comparações (valor médio): 5348705
+Tempo (valor médio): 3.583
 

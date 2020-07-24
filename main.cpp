@@ -18,15 +18,17 @@ int main()
         vectorSize = new int[n];
         for (int i = 0; i < n; i++){input >> vectorSize[i];} 
 
-        cenario1(n,vectorSize);
+//      cenario1(n,vectorSize);
         input.close();
         delete[] vectorSize;
 
     } else cout << "Error opening file 'entrada.txt' ";
 
+
    //cenario 2 chamada
-    n2= 1; vectorSizeCenario2[0] = 4;
     cenario2(vectorSizeCenario2, n2);
+
+    cout<< "fim" <<endl;
 
     return 0;
 }
